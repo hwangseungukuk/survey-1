@@ -4,10 +4,10 @@ const morgan = require('morgan');
 const cors = require('cors');
 const { sequelize } = require('./models');
 
-const app = express();
-
 const authRouter = require('./routes/auth');
 const surveyRouter = require('./routes/survey');
+
+const app = express();
 
 app.set('port', process.env.PORT || 8080);
 
