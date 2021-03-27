@@ -6,6 +6,7 @@ const auth = async(req, res) => {
             name: req.body.name,
             number: req.body.number
         });
+        res.setHeader("Content-Type", "application/json; charset=utf-8");
         res.status(200).json({
             message: "success"
         });
