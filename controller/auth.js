@@ -4,7 +4,7 @@ const auth = async(req, res) => {
     const name = req.body.name;
     const number = req.body.number;
     try {
-        await Survey.create({name: name},
+        await Survey.create({name: name}, {number: number},
             { fields: ["name", "number"] });
         console.log(name);
     } catch(err) {
