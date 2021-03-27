@@ -1,6 +1,6 @@
 const Survey = require('../models/survey');
 
-const post = async(req, res) => {
+const auth = async(req, res) => {
     try {
         await Survey.create({
             name: req.body.name,
@@ -17,5 +17,5 @@ const post = async(req, res) => {
 }
 
 module.exports = {
-    post
+    auth
 }
