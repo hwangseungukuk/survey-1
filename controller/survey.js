@@ -4,7 +4,7 @@ const getSurvey = async(req, res) => {
     const survey = req.body.survey;
     try {
         await Survey.create({survey: survey},
-            { fields: ["survey"] });
+            { fields: ["survey", "number"] });
         console.log(survey);
     } catch(error) {
         console.log(survey);
