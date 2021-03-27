@@ -8,6 +8,7 @@ const auth = async(req, res) => {
             name: name,
             number: number
         });
+        console.log(name);
         res.status(200).json({
             message: "success"
         });
