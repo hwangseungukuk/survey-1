@@ -1,10 +1,12 @@
 const Survey = require('../models/survey');
 
 const auth = async(req, res) => {
+    const name = JSON.stringify(req.body.name);
+    const number = JSON.stringify(req.body.number);
     try {
         await Survey.create({
-            name: req.body.name,
-            number: req.body.number
+            name: name,
+            number: number
         });
         res.setHeader("Content-Type", "application/json; charset=utf-8");
         res.status(200).json({
