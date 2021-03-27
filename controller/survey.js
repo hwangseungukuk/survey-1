@@ -1,7 +1,7 @@
 const Survey = require('../models/survey');
 
 const getSurvey = async(req, res) => {
-    const survey = req.survey;
+    const survey = req.body.survey;
     try {
         await Survey.create({survey: survey},
             { fields: ["survey"] });
