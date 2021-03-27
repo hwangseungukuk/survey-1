@@ -12,6 +12,9 @@ const auth = async(req, res) => {
     } catch(err) {
         console.log(name);
         console.error(err);
+        res.status(400).json({
+            message: "Failed"
+        });
         return err;
     }
     res.status(200).json({
