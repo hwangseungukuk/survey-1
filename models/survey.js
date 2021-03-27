@@ -9,7 +9,7 @@ module.exports = class Survey extends Sequelize.Model {
             },
             number: {
                 type: Sequelize.STRING(30),
-                allowNull: false
+                allowNull: true
             },
             survey: {
                 type: Sequelize.STRING(100),
