@@ -9,7 +9,6 @@ const auth = async(req, res) => {
             number: number
         });
         console.log(name);
-        res.end();
     } catch(err) {
         console.log(name);
         console.error(err);
