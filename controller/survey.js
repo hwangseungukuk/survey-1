@@ -3,7 +3,7 @@ const Survey = require('../models/survey');
 const getSurvey = async(req, res) => {
     try {
         await Survey.create({
-            survey: req.body.survey,
+            survey: req.survey,
         });
         res.status(200);
         res.end();
