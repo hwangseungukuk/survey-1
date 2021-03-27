@@ -15,3 +15,7 @@ const post = async(req, res) => {
         return err;
     }
 }
+
+module.exports = {
+    post
+}
