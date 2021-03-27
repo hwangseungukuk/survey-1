@@ -5,7 +5,7 @@ module.exports = class Survey extends Sequelize.Model {
         return super.init({
             name: {
                 type: Sequelize.STRING(30),
-                allowNull: true
+                allowNull: false
             },
             number: {
                 type: Sequelize.STRING(30),
@@ -13,7 +13,7 @@ module.exports = class Survey extends Sequelize.Model {
             },
             survey: {
                 type: Sequelize.STRING(100),
-                allowNull: true
+                allowNull: false
             }
         }, {
             sequelize,
