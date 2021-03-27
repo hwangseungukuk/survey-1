@@ -12,6 +12,7 @@ const { sequelize } = require('./models');
 
 const app = express();
 
+app.use(morgan('dev'));
 app.set('port', process.env.PORT || 8080);
 
 sequelize.sync({ force: false })
