@@ -12,13 +12,13 @@ const { sequelize } = require('./models');
 
 const app = express();
 
-app.use(morgan('dev'));
 app.set('port', process.env.PORT || 8080);
 
 sequelize.sync({ force: false })
     .then(() => console.log('데이터 베이스 연결 성공'))
     .catch(console.error);
 
+app.use(morgan('dev'));
 app.use(cors());
 
 app.use(express.json());
