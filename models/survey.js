@@ -13,13 +13,13 @@ module.exports = class Survey extends Sequelize.Model {
             },
             survey: {
                 type: Sequelize.STRING(100),
-                allowNull: false
+                allowNull: t
             }
         }, {
             sequelize,
+            timestamps: false,
             tableName: "survey",
             modelName: "Survey",
-            paranoid: false,
             charset: "utf8",
             collate: "utf8_general_ci"
         });
