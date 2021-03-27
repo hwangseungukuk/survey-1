@@ -26,7 +26,7 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-app.use('/auth', authRouter);
+app.use('/', authRouter);
 app.use('/survey', surveyRouter);
 
 app.use((req, res, next) => {
