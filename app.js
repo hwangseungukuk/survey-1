@@ -2,6 +2,9 @@ const express = require('express');
 const path = require('path');
 const morgan = require('morgan');
 const cors = require('cors');
+const dotenv = require('dotenv');
+
+dotenv.config();
 
 const authRouter = require('./routes/auth');
 const surveyRouter = require('./routes/survey');
