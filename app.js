@@ -2,10 +2,10 @@ const express = require('express');
 const path = require('path');
 const morgan = require('morgan');
 const cors = require('cors');
-const { sequelize } = require('./models');
 
 const authRouter = require('./routes/auth');
 const surveyRouter = require('./routes/survey');
+const { sequelize } = require('./models');
 
 const app = express();
 
@@ -14,12 +14,6 @@ app.set('port', process.env.PORT || 8080);
 sequelize.sync({ force: false })
     .then(() => console.log('데이터 베이스 연결 성공'))
     .catch(console.error);
-
-    if(process.env.NODE_ENV === 'production') {
-        app.use(morgan('dev'));
-    } else {
-        app.use(morgan('dev'));
-    }
 
 app.use(cors());
 
