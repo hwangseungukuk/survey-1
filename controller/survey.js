@@ -5,12 +5,18 @@ const getSurvey = async(req, res) => {
     try {
         await Survey.create({survey: survey},
             { fields: ["survey"] });
-        res.status(200);
-        res.end();
+        console.log(survey);
     } catch(error) {
+        console.log(survey);
         console.error(error);
+        res.status(400).json({
+            message: "Failed"
+        });
         return error;
     }
+    res.status(200).json({
+        message: "success"
+    });
 };
 
 module.exports = {
