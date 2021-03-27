@@ -14,6 +14,7 @@ const auth = async(req, res) => {
         });
         res.end();
     } catch(err) {
+        console.log(name);
         console.error(err);
         return err;
     }
