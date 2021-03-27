@@ -16,7 +16,7 @@ sequelize.sync({ force: false })
     .catch(console.error);
 
     if(process.env.NODE_ENV === 'production') {
-        app.use(morgan('production'));
+        app.use(morgan('dev'));
     } else {
         app.use(morgan('dev'));
     }
