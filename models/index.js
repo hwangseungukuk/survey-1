@@ -13,6 +13,4 @@ db.Survey = Survey;
 
 Survey.init(sequelize);
 
-Survey.associate(db);
-
 module.exports = db;
