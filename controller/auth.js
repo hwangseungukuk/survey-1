@@ -6,9 +6,7 @@ const auth = async(req, res) => {
     try {
         await Survey.create({name: name, number: number},
             { fields: ["name", "number"] });
-        console.log(name);
     } catch(err) {
-        console.log(name);
         console.error(err);
         res.status(400).json({
             message: "Failed"

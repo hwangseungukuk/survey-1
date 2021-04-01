@@ -4,8 +4,8 @@ module.exports = {
   "development": {
     "username": "admin",
     "password": process.env.PASSWORD,
-    "database": "survey",
-    "host": "sourceout.cycfrbihifri.ap-northeast-2.rds.amazonaws.com",
+    "database": "outsource",
+    "host": "database-1.cycfrbihifri.ap-northeast-2.rds.amazonaws.com",
     "dialect": "mysql",
     "operatorsAliases": 0,
     "timezone": "+09:00"
@@ -13,8 +13,8 @@ module.exports = {
   "test": {
     "username": "admin",
     "password": process.env.PASSWORD,
-    "database": "survey",
-    "host": "sourceout.cycfrbihifri.ap-northeast-2.rds.amazonaws.com",
+    "database": "outsource",
+    "host": "database-1.cycfrbihifri.ap-northeast-2.rds.amazonaws.com",
     "dialect": "mysql",
     "operatorsAliases": 0,
     "timezone": "+09:00"
@@ -22,8 +22,8 @@ module.exports = {
   "production": {
     "username": "admin",
     "password": process.env.PASSWORD,
-    "database": "survey",
-    "host": "sourceout.cycfrbihifri.ap-northeast-2.rds.amazonaws.com",
+    "database": "outsource",
+    "host": "database-1.cycfrbihifri.ap-northeast-2.rds.amazonaws.com",
     "dialect": "mysql",
     "operatorsAliases": 0,
     "timezone": "+09:00"
