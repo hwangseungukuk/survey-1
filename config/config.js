@@ -5,7 +5,7 @@ module.exports = {
     "username": "admin",
     "password": process.env.PASSWORD,
     "database": "outsource",
-    "host": "database-1.cycfrbihifri.ap-northeast-2.rds.amazonaws.com",
+    "host": "outsource.cycfrbihifri.ap-northeast-2.rds.amazonaws.com",
     "dialect": "mysql",
     "operatorsAliases": 0,
     "timezone": "+09:00"
@@ -14,7 +14,7 @@ module.exports = {
     "username": "admin",
     "password": process.env.PASSWORD,
     "database": "outsource",
-    "host": "database-1.cycfrbihifri.ap-northeast-2.rds.amazonaws.com",
+    "host": "outsource.cycfrbihifri.ap-northeast-2.rds.amazonaws.com",
     "dialect": "mysql",
     "operatorsAliases": 0,
     "timezone": "+09:00"
@@ -23,7 +23,7 @@ module.exports = {
     "username": "admin",
     "password": process.env.PASSWORD,
     "database": "outsource",
-    "host": "database-1.cycfrbihifri.ap-northeast-2.rds.amazonaws.com",
+    "host": "outsource.cycfrbihifri.ap-northeast-2.rds.amazonaws.com",
     "dialect": "mysql",
     "operatorsAliases": 0,
     "timezone": "+09:00"
