@@ -18,6 +18,6 @@ module.exports = class Survey extends Sequelize.Model {
     }
 
     static associate (db) {
-        db.Survey.hasOne(db.User, { foreignKey: "name"});
+        db.Survey.belongsTo(db.User);
     }
 }
