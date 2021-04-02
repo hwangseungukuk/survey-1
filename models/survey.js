@@ -1,6 +1,6 @@
 const Sequelize = require('sequelize');
 
-module.exports = class User extends Sequelize.Model {
+module.exports = class Survey extends Sequelize.Model {
     static init(sequelize) {
         return super.init({
             name: {
@@ -18,8 +18,8 @@ module.exports = class User extends Sequelize.Model {
         }, {
             sequelize,
             timestamps: false,
-            tableName: "user",
-            modelName: "User",
+            tableName: "survey",
+            modelName: "survey",
             charset: "utf8",
             collate: "utf8_general_ci"
         });
