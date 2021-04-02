@@ -1,8 +1,16 @@
 const Sequelize = require('sequelize');
 
-module.exports = class Survey extends Sequelize.Model {
+module.exports = class User extends Sequelize.Model {
     static init(sequelize) {
         return super.init({
+            name: {
+                type: Sequelize.STRING(30),
+                allowNull: false
+            },
+            number: {
+                type: Sequelize.STRING(30),
+                   allowNull: true
+            },
             survey: {
                 type: Sequelize.STRING(100),
                 allowNull: false
@@ -10,14 +18,10 @@ module.exports = class Survey extends Sequelize.Model {
         }, {
             sequelize,
             timestamps: false,
-            tableName: "survey",
-            modelName: "Survey",
+            tableName: "user",
+            modelName: "User",
             charset: "utf8",
             collate: "utf8_general_ci"
         });
-    }
-
-    static associate (db) {
-        db.Survey.belongsTo(db.User);
     }
 }
