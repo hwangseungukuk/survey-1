@@ -3,8 +3,9 @@ const Survey = require('../models/survey');
 const getSurvey = async(req, res) => {
     const survey = req.body.survey;
     try {
-        await Survey.create({survey: survey},
-            { fields: ["survey"] });
+        await Survey.update({survey: survey},
+            { where: { name: req.body.name },
+                fields: ["survey"] });
         console.log(survey);
     } catch(error) {
         console.log(survey);
