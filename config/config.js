@@ -2,28 +2,28 @@ require('dotenv').config();
 
 module.exports = {
   "development": {
-    "username": "root",
+    "username": "admin",
     "password": process.env.PASSWORD,
-    "database": "outsource",
-    "host": "sql211.utae.co.kr",
+    "database": "survey",
+    "host": "outsource.cycfrbihifri.ap-northeast-2.rds.amazonaws.com",
     "dialect": "mysql",
     "operatorsAliases": 0,
     "timezone": "+09:00"
   },
   "test": {
-    "username": "root",
+    "username": "admin",
     "password": process.env.PASSWORD,
-    "database": "outsource",
-    "host": "sql211.utae.co.kr",
+    "database": "survey",
+    "host": "outsource.cycfrbihifri.ap-northeast-2.rds.amazonaws.com",
     "dialect": "mysql",
     "operatorsAliases": 0,
     "timezone": "+09:00"
   },
   "production": {
-    "username": "root",
+    "username": "admin",
     "password": process.env.PASSWORD,
-    "database": "outsource",
-    "host": "sql211.utae.co.kr",
+    "database": "survey",
+    "host": "outsource.cycfrbihifri.ap-northeast-2.rds.amazonaws.com",
     "dialect": "mysql",
     "operatorsAliases": 0,
     "timezone": "+09:00"
