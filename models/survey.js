@@ -14,6 +14,11 @@ module.exports = class Survey extends Sequelize.Model {
             survey: {
                 type: Sequelize.STRING(100),
                 allowNull: false
+            },
+            created_at: {
+                type: Sequelize.DATE(6),
+                allowNull: false,
+                defaultValue: Sequelize.NOW
             }
         }, {
             sequelize,
