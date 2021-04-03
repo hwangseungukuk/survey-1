@@ -3,7 +3,7 @@ const Survey = require('../models/survey');
 const getSurvey = async(req, res) => {
     const survey = req.body.survey;
     try {
-        await Survey.update({survey: survey},
+        await Survey.update({suvey: survey},
             { where: { name: req.body.name },
                 fields: ["survey"] });
         console.log(survey);
