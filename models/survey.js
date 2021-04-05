@@ -3,26 +3,21 @@ const Sequelize = require('sequelize');
 module.exports = class Survey extends Sequelize.Model {
     static init(sequelize) {
         return super.init({
-            id: {
-                type: Sequelize.INTEGER(11),
-                allowNull: false
-            },
             name: {
                 type: Sequelize.STRING(255),
                 allowNull: false
             },
             number: {
                 type: Sequelize.STRING(255),
-                   allowNull: true
+                allowNull: true
             },
-            suvey: {
+            survey: {
                 type: Sequelize.STRING(255),
                 allowNull: false
             },
             date: {
-                type: Sequelize.DATE(6),
-                allowNull: false,
-                defaultValue: Sequelize.NOW
+                type: Sequelize.DATE,
+                allowNull: false
             }
         }, {
             sequelize,
