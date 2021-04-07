@@ -30,7 +30,7 @@ app.use(cors());
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(express.static(__dirname + '/frontend'));
+app.use(express.static('/frontend'));
 app.use(cookieParser(process.env.COOKIE_SECRET));
 const sessionOption = {
     resave: false,
@@ -49,7 +49,7 @@ if(process.env.NODE_ENV === 'production') {
 app.use(session(sessionOption));
 
 app.get('/', (req, res) => {
-    res.status(200).sendFile(__dirname + '/index.html');
+    res.status(200).sendFile('/index.html');
 })
 app.use('/', authRouter);
 app.use('/survey', surveyRouter);
