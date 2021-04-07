@@ -30,7 +30,7 @@ app.use(cors());
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(express.static(__dirname, '/frontend'));
+app.use(express.static(__dirname + '/frontend'));
 app.use(cookieParser(process.env.COOKIE_SECRET));
 const sessionOption = {
     resave: false,
