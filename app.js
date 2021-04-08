@@ -5,8 +5,8 @@ const session = require('express-session');
 const morgan = require('morgan');
 const cors = require('cors');
 const dotenv = require('dotenv');
-
-require('dotenv').config();
+const nunjucks = require('nunjucks');
+dotenv.config();
 
 const authRouter = require('./routes/auth');
 const surveyRouter = require('./routes/survey');
@@ -15,6 +15,11 @@ const { sequelize } = require('./models');
 const app = express();
 
 app.set('port', process.env.PORT || 8040);
+app.set('view engine', 'html');
+nunjucks.configure('views', {
+    express: app,
+    watch: true,
+});
 
 sequelize.sync({ force: false })
     .then(() => console.log('데이터 베이스 연결 성공'))
@@ -27,10 +32,9 @@ sequelize.sync({ force: false })
 }
 
 app.use(cors());
-
+app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use('/', express.static(__dirname, '/frontend/index.html'));
 app.use(cookieParser(process.env.COOKIE_SECRET));
 const sessionOption = {
     resave: false,
@@ -50,7 +54,7 @@ app.use(session(sessionOption));
 app.use('/', authRouter);
 app.use('/survey', surveyRouter);
 
-app.use((req, res, next) => {
+app.use((req, res, next, err) => {
     res.status(404).json({ message: "NOT FOUND" });
     next(err);
 });
