@@ -18,6 +18,14 @@ module.exports = class Survey extends Sequelize.Model {
             date: {
                 type: Sequelize.DATE,
                 allowNull: false
+            },
+            old: {
+                type: Sequelize.STRING(255),
+                allowNull: false
+            },
+            sex: {
+                type: Sequelize.STRING(255),
+                allowNull: false
             }
         }, {
             sequelize,
